@@ -2,7 +2,7 @@ const { URLs } = require("../models/db");
 const { int2radix64, radix64toint } = require("../services/radix64-service");
 
 async function createRandomShortCode(link) {
-  const genCode = parseInt(Math.random() * 9999999999999);
+  const genCode = parseInt(Math.random() * 999999999999);
 
   const exists = await URLs.findOne({
     where: {
